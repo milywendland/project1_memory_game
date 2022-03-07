@@ -1,19 +1,19 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
   background-color: #9addee;
   color: #ffb300;
   font-family: 'Press Start 2P', cursive;
   font-size: 25px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  height: 100vh;
   justify-content: center;
   margin: auto;
-  max-width: fit-content;
+  grid-template-rows: 1fr 1fr 1fr 1fr 3fr;
 }
 
+section {
+  font-size: 27px;
+  justify-self: center;
+}
 #countdown {
   font-size: 15px;
   color: #f08fa0;
@@ -31,7 +31,23 @@ body {
   border-color: #8035bd;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-column-gap: 10px;
+}
+
 #card-one {
+  background-color: #45cded;
+  color: whitesmoke;
+  height: 300px;
+  width: 200px;
+  border-style: none;
+  border-radius: 12px;
+  background-size: 200px;
+}
+
+#card-two {
   background-color: #45cded;
   color: whitesmoke;
   height: 300px;
