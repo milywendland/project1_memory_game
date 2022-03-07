@@ -35,3 +35,5 @@
 ---
 
 ### **_Credits_**
+
+#### 10 second timer [StackOverflow](https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown)
