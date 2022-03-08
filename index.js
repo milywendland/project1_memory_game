@@ -8,7 +8,7 @@ let cards = [
 let countDown = document.getElementById('countdown')
 let startButton = document.getElementById('start')
 let winner = document.getElementById('winner')
-// let cardButton = document.querySelectorAll('button')
+let newGameButton = document.getElementById('new-game')
 let card1 = document.getElementById('btn1')
 let card2 = document.getElementById('btn2')
 let card3 = document.getElementById('btn3')
@@ -18,30 +18,74 @@ let clickCount = 0
 function checkForMatch() {
   if (
     card1.style.backgroundImage.value == card2.style.backgroundImage.value &&
-    card3.style.backgroundImage.value == card4.style.backgroundImage.value &&
-    clickCount === 4
+    clickCount >= 2
   ) {
-    winner.innerHTML = 'Winner!'
-    winner.style.color = 'whitesmoke'
-    card1.style.backgroundImage = cards[0]
-    card2.style.backgroundImage = cards[1]
-    card3.style.backgroundImage = cards[2]
-    card4.style.backgroundImage = cards[3]
+    winner.innerHTML = 'Match Found!'
   } else if (
     card1.style.backgroundImage == card3.style.backgroundImage &&
-    card2.style.backgroundImage == card4.style.backgroundImage &&
-    clickCount === 4
+    clickCount >= 2
   ) {
-    winner.innerHTML = 'Winner!'
-    winner.style.color = 'whitesmoke'
-    card1.style.backgroundImage = cards[0]
-    card2.style.backgroundImage = cards[1]
-    card3.style.backgroundImage = cards[2]
-    card4.style.backgroundImage = cards[3]
+    winner.innerHTML = 'Match Found!'
+  } else if (
+    card3.style.backgroundImage.value == card4.style.backgroundImage.value &&
+    clickCount >= 2
+  ) {
+    winner.innerHTML = 'Match Found!'
+  } else if (
+    card1.style.backgroundImage.value == card4.style.backgroundImage.value &&
+    clickCount >= 2
+  ) {
+    winner.innerHTML = 'Match Found!'
+  } else if (
+    card2.style.backgroundImage.value == card3.style.backgroundImage.value &&
+    clickCount >= 2
+  ) {
+    winner.innerHTML = 'Match Found!'
   }
+  function checkForWin() {
+    if (
+      card1.style.backgroundImage.value == card2.style.backgroundImage.value &&
+      card3.style.backgroundImage.value == card4.style.backgroundImage.value &&
+      clickCount === 4
+    ) {
+      winner.innerHTML = 'Winner!'
+      winner.style.color = 'whitesmoke'
+      card1.style.backgroundImage = cards[0]
+      card2.style.backgroundImage = cards[1]
+      card3.style.backgroundImage = cards[2]
+      card4.style.backgroundImage = cards[3]
+    } else if (
+      card1.style.backgroundImage == card3.style.backgroundImage &&
+      card2.style.backgroundImage == card4.style.backgroundImage &&
+      clickCount === 4
+    ) {
+      winner.innerHTML = 'Winner!'
+      winner.style.color = 'whitesmoke'
+      card1.style.backgroundImage = cards[0]
+      card2.style.backgroundImage = cards[1]
+      card3.style.backgroundImage = cards[2]
+      card4.style.backgroundImage = cards[3]
+    } else if (
+      card1.style.backgroundImage == card4.style.backgroundImage &&
+      card2.style.backgroundImage == card3.style.backgroundImage &&
+      clickCount === 4
+    ) {
+      winner.innerHTML = 'Winner!'
+      winner.style.color = 'whitesmoke'
+      card1.style.backgroundImage = cards[0]
+      card2.style.backgroundImage = cards[1]
+      card3.style.backgroundImage = cards[2]
+      card4.style.backgroundImage = cards[3]
+    }
+  }
+  checkForWin()
 }
 
 startButton.addEventListener('click', () => {
+  clickCount == 0
+  winner.innerHTML = ''
+  winner.style = ''
+
   function shuffle(cards) {
     cards.sort(() => Math.random() - 0.5)
   }
@@ -50,7 +94,7 @@ startButton.addEventListener('click', () => {
   const timer = setInterval(function () {
     if (timeLeft <= 0) {
       clearInterval(timer)
-      countDown.innerHTML = 'Times up!'
+      countDown.innerHTML = 'Times up! Pick a card!'
       card1.style.backgroundImage = ''
       card2.style.backgroundImage = ''
       card3.style.backgroundImage = ''
@@ -75,13 +119,12 @@ card1.addEventListener('click', () => {
   const timer = setInterval(function () {
     if (timeLeft <= 0) {
       clearInterval(timer)
-      countDown.innerHTML = 'Times up!'
+      countDown.innerHTML = 'Pick a card!'
       card1.style.backgroundColor = '#45cded'
       card1.style.backgroundImage = ''
       card1.disabled = false
     } else {
       countDown.value = 10 - timeLeft
-      countDown.innerHTML = 'Countdown: ' + timeLeft + ' seconds remaining'
       card1.style.backgroundImage = cards[0]
       card1.disabled = true
     }
@@ -96,13 +139,13 @@ card2.addEventListener('click', () => {
   const timer = setInterval(function () {
     if (timeLeft <= 0) {
       clearInterval(timer)
-      countDown.innerHTML = 'Times up!'
+      countDown.innerHTML = 'Pick a card!'
       card2.style.backgroundColor = '#45cded'
       card2.style.backgroundImage = ''
       card2.disabled = false
     } else {
       countDown.value = 10 - timeLeft
-      countDown.innerHTML = 'Countdown: ' + timeLeft + ' seconds remaining'
+      countDown.innerHTML = ''
       card2.style.backgroundImage = cards[1]
       card2.disabled = true
     }
@@ -117,13 +160,13 @@ card3.addEventListener('click', () => {
   const timer = setInterval(function () {
     if (timeLeft <= 0) {
       clearInterval(timer)
-      countDown.innerHTML = 'Times up!'
+      countDown.innerHTML = 'Pick a card!'
       card3.style.backgroundColor = '#45cded'
       card3.style.backgroundImage = ''
       card3.disabled = false
     } else {
       countDown.value = 10 - timeLeft
-      countDown.innerHTML = 'Countdown: ' + timeLeft + ' seconds remaining'
+      countDown.innerHTML = ''
       card3.style.backgroundImage = cards[2]
       card3.disabled = true
     }
@@ -138,13 +181,13 @@ card4.addEventListener('click', () => {
   const timer = setInterval(function () {
     if (timeLeft <= 0) {
       clearInterval(timer)
-      countDown.innerHTML = 'Times up!'
+      countDown.innerHTML = 'Pick a Card!'
       card4.style.backgroundColor = '#45cded'
       card4.style.backgroundImage = ''
       card4.disabled = false
     } else {
       countDown.value = 10 - timeLeft
-      countDown.innerHTML = 'Countdown: ' + timeLeft + ' seconds remaining'
+      countDown.innerHTML = ''
       card4.style.backgroundImage = cards[3]
       card4.disabled = true
     }

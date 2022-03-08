@@ -22,6 +22,11 @@ section {
   margin-bottom: 5px;
 }
 
+.startbutton section {
+  width: 700px;
+  justify-self: center;
+}
+
 #start button {
   font-size: 15px;
   height: 45px;
@@ -34,13 +39,19 @@ section {
   margin-bottom: 10px;
 }
 
-#winner {
-  /* background-color: #ffb300;
+#new-game {
+  font-size: 15px;
+  height: 45px;
+  width: 95px;
+  background-color: #8d8ff3;
+  color: #fde3a7;
   font-family: 'Press Start 2P', cursive;
-  color: whitesmoke;
-  height: 70px;
-  width: 200px;
-  display: inline-block; */
+  border-color: #8035bd;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#winner {
 }
 
 #card-grid {
