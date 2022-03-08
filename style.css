@@ -34,6 +34,15 @@ section {
   margin-bottom: 10px;
 }
 
+#winner {
+  /* background-color: #ffb300;
+  font-family: 'Press Start 2P', cursive;
+  color: whitesmoke;
+  height: 70px;
+  width: 200px;
+  display: inline-block; */
+}
+
 #card-grid {
   height: 500px;
   width: 100%;
@@ -53,12 +62,6 @@ section {
   border-radius: 12px;
   margin-bottom: 10px;
   background-size: 170px;
-}
-
-#winner {
-  background-color: #ffb300;
-  font-family: 'Press Start 2P', cursive;
-  color: whitesmoke;
 }
 
 /* #card-four {

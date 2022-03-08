@@ -13,22 +13,32 @@ let card1 = document.getElementById('btn1')
 let card2 = document.getElementById('btn2')
 let card3 = document.getElementById('btn3')
 let card4 = document.getElementById('btn4')
+let clickCount = 0
 
 function checkForMatch() {
-  let cardsClicked = []
-  let cardsIndex = []
-  let cardsMatched = 0
-  let firstCard = cardsIndex[0]
-  let secondCard = cardsIndex[1]
-  if (cardsClicked[0] === cardsClicked[1] && firstCard !== secondCard) {
-    cardsMatched += 1
+  if (
+    card1.style.backgroundImage.value == card2.style.backgroundImage.value &&
+    card3.style.backgroundImage.value == card4.style.backgroundImage.value &&
+    clickCount === 4
+  ) {
+    winner.innerHTML = 'Winner!'
+    winner.style.color = 'whitesmoke'
+    card1.style.backgroundImage = cards[0]
+    card2.style.backgroundImage = cards[1]
+    card3.style.backgroundImage = cards[2]
+    card4.style.backgroundImage = cards[3]
+  } else if (
+    card1.style.backgroundImage == card3.style.backgroundImage &&
+    card2.style.backgroundImage == card4.style.backgroundImage &&
+    clickCount === 4
+  ) {
+    winner.innerHTML = 'Winner!'
+    winner.style.color = 'whitesmoke'
+    card1.style.backgroundImage = cards[0]
+    card2.style.backgroundImage = cards[1]
+    card3.style.backgroundImage = cards[2]
+    card4.style.backgroundImage = cards[3]
   }
-  // function checkWin() {
-  //   if (cardsMatched == cards.length * 0.5) {
-  //     winner.innerHTML = 'Winner!'
-  //   }
-  // }
-  // checkWin()
 }
 
 startButton.addEventListener('click', () => {
@@ -36,7 +46,6 @@ startButton.addEventListener('click', () => {
     cards.sort(() => Math.random() - 0.5)
   }
   shuffle(cards)
-
   let timeLeft = 15
   const timer = setInterval(function () {
     if (timeLeft <= 0) {
@@ -61,6 +70,7 @@ startButton.addEventListener('click', () => {
 })
 
 card1.addEventListener('click', () => {
+  clickCount = clickCount + 1
   let timeLeft = 10
   const timer = setInterval(function () {
     if (timeLeft <= 0) {
@@ -81,6 +91,7 @@ card1.addEventListener('click', () => {
 })
 
 card2.addEventListener('click', () => {
+  clickCount = clickCount + 1
   let timeLeft = 10
   const timer = setInterval(function () {
     if (timeLeft <= 0) {
@@ -101,6 +112,7 @@ card2.addEventListener('click', () => {
 })
 
 card3.addEventListener('click', () => {
+  clickCount = clickCount + 1
   let timeLeft = 10
   const timer = setInterval(function () {
     if (timeLeft <= 0) {
@@ -121,6 +133,7 @@ card3.addEventListener('click', () => {
 })
 
 card4.addEventListener('click', () => {
+  clickCount = clickCount + 1
   let timeLeft = 10
   const timer = setInterval(function () {
     if (timeLeft <= 0) {
