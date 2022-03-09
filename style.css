@@ -39,19 +39,8 @@ section {
   margin-bottom: 10px;
 }
 
-#new-game {
-  font-size: 15px;
-  height: 45px;
-  width: 95px;
-  background-color: #8d8ff3;
-  color: #fde3a7;
-  font-family: 'Press Start 2P', cursive;
-  border-color: #8035bd;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
 #winner {
+  justify-self: center;
 }
 
 #card-grid {
@@ -74,13 +63,3 @@ section {
   margin-bottom: 10px;
   background-size: 170px;
 }
-
-/* #card-four {
-  background-color: #45cded;
-  color: whitesmoke;
-  height: 300px;
-  width: 200px;
-  border-style: none;
-  border-radius: 12px;
-  background-size: 200px;
-} */

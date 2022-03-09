@@ -39,3 +39,5 @@
 #### 10 second timer [StackOverflow](https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown)
 
 #### Card shuffle/array random sorter help [W3Docs](https://www.w3docs.com/snippets/javascript/how-to-randomize-shuffle-a-javascript-array.html)
+
+#### CSS Grid [CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
