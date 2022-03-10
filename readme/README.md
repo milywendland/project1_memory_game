@@ -16,13 +16,17 @@
 
 ### **_Technologies Used_**
 
-#### N/A
+#### \*HTML
+
+#### \*CSS
+
+#### \*Javascript
 
 ---
 
 ### **_Getting Started_**
 
-#### To get started, I've decided what I want the cards to look like. I need to become best friends with css grid. I'll definitely be playing grid garden a lot. I will be looking back over our lessons. Working on the Trello board.
+#### To get started, I've decided what I want the cards to look like. I need to become best friends with css grid. I'll definitely be playing grid garden a lot. I will be looking back over our lessons. I'll also be working on my project Trello board.
 
 ---
 

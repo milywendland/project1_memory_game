@@ -88,14 +88,14 @@ checkMatch = () => {
 }
 
 checkWin = () => {
-  if (cardsMatched === cards.length / 2 && clickCount >= 8) {
+  if ((cardsMatched = cards.length / 2 && clickCount >= 8)) {
     winner.innerHTML = 'YOU WON!'
   }
 }
 
 startButton.addEventListener('click', () => {
-  clickCount == 0
-  cardsMatched == 0
+  clickCount = 0
+  cardsMatched = 0
   winner.innerHTML = ''
   winner.style = ''
   function shuffle(cards) {
