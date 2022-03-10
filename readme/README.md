@@ -36,7 +36,7 @@
 
 ### **_Credits_**
 
-#### 10 second timer [StackOverflow](https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown)
+#### Countdown timer [StackOverflow](https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown)
 
 #### Card shuffle/array random sorter help [W3Docs](https://www.w3docs.com/snippets/javascript/how-to-randomize-shuffle-a-javascript-array.html)
 
