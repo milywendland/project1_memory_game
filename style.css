@@ -49,11 +49,7 @@ section {
   grid-gap: 2px;
 }
 
-#card-grid img {
-  margin: 2px;
-}
-
-.btn {
+#card {
   background-color: #45cded;
   color: whitesmoke;
   height: 250px;
@@ -66,6 +62,7 @@ section {
 
 a {
   margin-bottom: 10px;
+  margin-top: 10px;
   text-decoration: none;
 }
 
