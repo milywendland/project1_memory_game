@@ -23,10 +23,75 @@ let card8 = document.getElementById('btn8')
 
 let clickCount = 0
 let cardsMatched = 0
-let cardsQuantity = cards.length / 2
-let cardsClicked = []
 
-checkMatch = () => {}
+let card1style = card1.style.backgroundImage
+let card2style = card1.style.backgroundImage
+let card3style = card1.style.backgroundImage
+let card4style = card1.style.backgroundImage
+let card5style = card1.style.backgroundImage
+let card6style = card1.style.backgroundImage
+let card7style = card1.style.backgroundImage
+let card8style = card1.style.backgroundImage
+
+checkMatch = () => {
+  if (cards[0] === cards[1]) {
+    cardsMatched += 1
+  } else if (cards[0] === cards[2]) {
+    cardsMatched += 1
+  } else if (cards[0] === cards[3]) {
+    cardsMatched += 1
+  } else if (cards[0] === cards[4]) {
+    cardsMatched += 1
+  } else if (cards[0] === cards[5]) {
+    cardsMatched += 1
+  } else if (cards[0] === cards[6]) {
+    cardsMatched += 1
+  } else if (cards[0] === cards[7]) {
+    cardsMatched += 1
+  } else if (cards[1] === cards[2]) {
+    cardsMatched += 1
+  } else if (cards[1] === cards[3]) {
+    cardsMatched += 1
+  } else if (cards[1] === cards[4]) {
+    cardsMatched += 1
+  } else if (cards[1] === cards[5]) {
+    cardsMatched += 1
+  } else if (cards[1] === cards[6]) {
+    cardsMatched += 1
+  } else if (cards[1] === cards[7]) {
+    cardsMatched += 1
+  } else if (cards[2] === cards[3]) {
+    cardsMatched += 1
+  } else if (cards[2] === cards[4]) {
+    cardsMatched += 1
+  } else if (cards[2] === cards[5]) {
+    cardsMatched += 1
+  } else if (cards[2] === cards[6]) {
+    cardsMatched += 1
+  } else if (cards[2] === cards[7]) {
+    cardsMatched += 1
+  } else if (cards[3] === cards[4]) {
+    cardsMatched += 1
+  } else if (cards[4] === cards[5]) {
+    cardsMatched += 1
+  } else if (cards[4] === cards[6]) {
+    cardsMatched += 1
+  } else if (cards[4] === cards[7]) {
+    cardsMatched += 1
+  } else if (cards[5] === cards[6]) {
+    cardsMatched += 1
+  } else if (cards[5] === cards[7]) {
+    cardsMatched += 1
+  } else if (cards[6] === cards[7]) {
+    cardsMatched += 1
+  }
+}
+
+checkWin = () => {
+  if (cardsMatched === cards.length / 2 && clickCount >= 8) {
+    winner.innerHTML = 'YOU WON!'
+  }
+}
 
 startButton.addEventListener('click', () => {
   clickCount == 0
@@ -81,6 +146,8 @@ card1.addEventListener('click', () => {
     }
     timeLeft -= 1
   }, 1000)
+  checkMatch()
+  checkWin()
 })
 
 card2.addEventListener('click', () => {
@@ -97,6 +164,8 @@ card2.addEventListener('click', () => {
     }
     timeLeft -= 1
   }, 1000)
+  checkMatch()
+  checkWin()
 })
 
 card3.addEventListener('click', () => {
@@ -113,6 +182,8 @@ card3.addEventListener('click', () => {
     }
     timeLeft -= 1
   }, 1000)
+  checkMatch()
+  checkWin()
 })
 
 card4.addEventListener('click', () => {
@@ -129,6 +200,8 @@ card4.addEventListener('click', () => {
     }
     timeLeft -= 1
   }, 1000)
+  checkMatch()
+  checkWin()
 })
 
 card5.addEventListener('click', () => {
@@ -145,6 +218,8 @@ card5.addEventListener('click', () => {
     }
     timeLeft -= 1
   }, 1000)
+  checkMatch()
+  checkWin()
 })
 
 card6.addEventListener('click', () => {
@@ -161,6 +236,8 @@ card6.addEventListener('click', () => {
     }
     timeLeft -= 1
   }, 1000)
+  checkMatch()
+  checkWin()
 })
 
 card7.addEventListener('click', () => {
@@ -177,6 +254,8 @@ card7.addEventListener('click', () => {
     }
     timeLeft -= 1
   }, 1000)
+  checkMatch()
+  checkWin()
 })
 
 card8.addEventListener('click', () => {
@@ -193,4 +272,6 @@ card8.addEventListener('click', () => {
     }
     timeLeft -= 1
   }, 1000)
+  checkMatch()
+  checkWin()
 })
