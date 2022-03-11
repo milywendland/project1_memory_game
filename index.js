@@ -23,6 +23,7 @@ let card8 = document.getElementById('btn8')
 
 let clickCount = 0
 let cardsMatched = 0
+let matches = []
 
 let card1style = card1.style.backgroundImage
 let card2style = card1.style.backgroundImage
@@ -86,6 +87,15 @@ checkMatch = () => {
     cardsMatched += 1
   }
 }
+
+matchList = () => {
+  if ((cardsMatched += 1)) {
+    matches.length += 1
+    return (match = true)
+  }
+}
+
+changeCardBackground = () => {}
 
 checkWin = () => {
   if ((cardsMatched = cards.length / 2 && clickCount >= 8)) {
