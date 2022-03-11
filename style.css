@@ -83,6 +83,10 @@ a:hover {
   background-image: url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png);
 }
 
+/* #buttons {
+  background-color: #6bf6b1;
+} */
+
 .insta a {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

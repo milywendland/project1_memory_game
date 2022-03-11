@@ -20,6 +20,7 @@ let card5 = document.getElementById('btn5')
 let card6 = document.getElementById('btn6')
 let card7 = document.getElementById('btn7')
 let card8 = document.getElementById('btn8')
+let matchesStyle = document.getElementById('buttons')
 
 let cardsMatched = 'cloud'
 let cardsClicked = []
@@ -51,6 +52,9 @@ checkWin = () => {
 }
 
 startButton.addEventListener('click', () => {
+  clickCount = 0
+  matches = []
+  cardsClicked = []
   function shuffle(cards) {
     cards.sort(() => Math.random() - 0.5)
   }
