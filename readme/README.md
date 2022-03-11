@@ -32,7 +32,9 @@
 
 ### **_Screenshots_**
 
----
+![Card Game](https://64.media.tumblr.com/fce38ed3827263d5bcd127de06a6edf0/2c9ba1d3f3fcc982-f0/s540x810/fee2a7e07bae5f738285261d375bca8da08b2507.png)
+
+## ![Credits Page](https://64.media.tumblr.com/dfdcba0ebd7e9176b4674515e3a2da3d/86e76b14c4c983b8-64/s540x810/4b2891beaa59f6b879382ad1d9c23b70ed3631fc.png)
 
 ### **_Future Updates_**
 
