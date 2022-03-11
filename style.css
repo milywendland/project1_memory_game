@@ -30,6 +30,11 @@ a:hover {
   color: #f08fa0;
 }
 
+#img img {
+  height: 250px;
+  width: 150px;
+}
+
 #countdown {
   font-size: 15px;
   color: #f08fa0;

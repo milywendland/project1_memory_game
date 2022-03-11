@@ -21,91 +21,36 @@ let card6 = document.getElementById('btn6')
 let card7 = document.getElementById('btn7')
 let card8 = document.getElementById('btn8')
 
-let clickCount = 0
-let cardsMatched = 0
-// let matches = []
+let cardsMatched = 'cloud'
+let cardsClicked = []
+let matches = []
+clickCount = 0
 
-let card1style = card1.style.backgroundImage
-let card2style = card1.style.backgroundImage
-let card3style = card1.style.backgroundImage
-let card4style = card1.style.backgroundImage
-let card5style = card1.style.backgroundImage
-let card6style = card1.style.backgroundImage
-let card7style = card1.style.backgroundImage
-let card8style = card1.style.backgroundImage
+let card1style = cards[0]
+let card2style = cards[1]
+let card3style = cards[2]
+let card4style = cards[3]
+let card5style = cards[4]
+let card6style = cards[5]
+let card7style = cards[6]
+let card8style = cards[7]
 
 checkMatch = () => {
-  if (cards[0] === cards[1]) {
-    cardsMatched += 1
-  } else if (cards[0] === cards[2]) {
-    cardsMatched += 1
-  } else if (cards[0] === cards[3]) {
-    cardsMatched += 1
-  } else if (cards[0] === cards[4]) {
-    cardsMatched += 1
-  } else if (cards[0] === cards[5]) {
-    cardsMatched += 1
-  } else if (cards[0] === cards[6]) {
-    cardsMatched += 1
-  } else if (cards[0] === cards[7]) {
-    cardsMatched += 1
-  } else if (cards[1] === cards[2]) {
-    cardsMatched += 1
-  } else if (cards[1] === cards[3]) {
-    cardsMatched += 1
-  } else if (cards[1] === cards[4]) {
-    cardsMatched += 1
-  } else if (cards[1] === cards[5]) {
-    cardsMatched += 1
-  } else if (cards[1] === cards[6]) {
-    cardsMatched += 1
-  } else if (cards[1] === cards[7]) {
-    cardsMatched += 1
-  } else if (cards[2] === cards[3]) {
-    cardsMatched += 1
-  } else if (cards[2] === cards[4]) {
-    cardsMatched += 1
-  } else if (cards[2] === cards[5]) {
-    cardsMatched += 1
-  } else if (cards[2] === cards[6]) {
-    cardsMatched += 1
-  } else if (cards[2] === cards[7]) {
-    cardsMatched += 1
-  } else if (cards[3] === cards[4]) {
-    cardsMatched += 1
-  } else if (cards[4] === cards[5]) {
-    cardsMatched += 1
-  } else if (cards[4] === cards[6]) {
-    cardsMatched += 1
-  } else if (cards[4] === cards[7]) {
-    cardsMatched += 1
-  } else if (cards[5] === cards[6]) {
-    cardsMatched += 1
-  } else if (cards[5] === cards[7]) {
-    cardsMatched += 1
-  } else if (cards[6] === cards[7]) {
-    cardsMatched += 1
+  if (cardsClicked.length === 2 && cardsClicked[0] === cardsClicked[1]) {
+    matches.push(cardsClicked)
+    console.log(matches)
+  } else if (cardsClicked.length === 2 && cardsClicked[0] !== cardsClicked[1]) {
+    cardsMatched = 'poop'
   }
 }
 
-// matchList = () => {
-//   if ((cardsMatched += 1)) {
-//     matches.length += 1
-//     return (match = true)
-//   }
-// }
-
 checkWin = () => {
-  if ((cardsMatched = cards.length / 2 && clickCount >= 8)) {
-    winner.innerHTML = 'YOU WON!'
+  if ((matches.length = cards.length / 2) && clickCount >= 8) {
+    winner.innerHTML = 'You Win!'
   }
 }
 
 startButton.addEventListener('click', () => {
-  clickCount = 0
-  cardsMatched = 0
-  winner.innerHTML = ''
-  winner.style = ''
   function shuffle(cards) {
     cards.sort(() => Math.random() - 0.5)
   }
@@ -149,145 +94,106 @@ startButton.addEventListener('click', () => {
 })
 
 card1.addEventListener('click', () => {
-  clickCount = clickCount + 1
-  let timeLeft = 7
-  const timer = setInterval(function () {
-    if (timeLeft <= 0) {
-      clearInterval(timer)
-      countDown.innerHTML = 'Pick a card!'
-      card1.style.backgroundImage = ''
-    } else {
-      countDown.value = 7 - timeLeft
-      card1.style.backgroundImage = cards[0]
-    }
-    timeLeft -= 1
-  }, 1000)
+  cardsClicked.push(card1style)
+  card1.style.backgroundImage = cards[0]
+  clickCount += 1
   checkMatch()
+  if (cardsClicked.length === 2 && cardsMatched === 'cloud') {
+    card1.style.backgroundColor = '#194D33'
+  } else if (cardsMatched === 'poop') {
+    card1.style.backgroundImage =
+      'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
+  }
   checkWin()
 })
 
 card2.addEventListener('click', () => {
-  clickCount = clickCount + 1
-  let timeLeft = 7
-  const timer = setInterval(function () {
-    if (timeLeft <= 0) {
-      clearInterval(timer)
-      countDown.innerHTML = 'Pick a card!'
-      card2.style.backgroundImage = ''
-    } else {
-      countDown.value = 7 - timeLeft
-      card2.style.backgroundImage = cards[1]
-    }
-    timeLeft -= 1
-  }, 1000)
+  cardsClicked.push(card2style)
+  card2.style.backgroundImage = cards[1]
+  clickCount += 1
   checkMatch()
+  if (cardsClicked.length == 2 && cardsMatched === true) {
+  } else if (cardsMatched === false) {
+    card2.style.backgroundImage =
+      'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
+  }
   checkWin()
 })
 
 card3.addEventListener('click', () => {
-  clickCount = clickCount + 1
-  let timeLeft = 7
-  const timer = setInterval(function () {
-    if (timeLeft <= 0) {
-      clearInterval(timer)
-      countDown.innerHTML = 'Pick a card!'
-      card3.style.backgroundImage = ''
-    } else {
-      countDown.value = 7 - timeLeft
-      card3.style.backgroundImage = cards[2]
-    }
-    timeLeft -= 1
-  }, 1000)
+  cardsClicked.push(card3style)
+  card3.style.backgroundImage = cards[2]
+  clickCount += 1
   checkMatch()
+  if (cardsClicked.length == 2 && cardsMatched === true) {
+  } else if (cardsMatched === false) {
+    card3.style.backgroundImage =
+      'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
+  }
   checkWin()
 })
 
 card4.addEventListener('click', () => {
-  clickCount = clickCount + 1
-  let timeLeft = 7
-  const timer = setInterval(function () {
-    if (timeLeft <= 0) {
-      clearInterval(timer)
-      countDown.innerHTML = 'Pick a card!'
-      card4.style.backgroundImage = ''
-    } else {
-      countDown.value = 7 - timeLeft
-      card4.style.backgroundImage = cards[3]
-    }
-    timeLeft -= 1
-  }, 1000)
+  cardsClicked.push(card4style)
+  card4.style.backgroundImage = cards[3]
+  clickCount += 1
   checkMatch()
+  if (cardsClicked.length == 2 && cardsMatched === true) {
+  } else if (cardsMatched === false) {
+    card4.style.backgroundImage =
+      'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
+  }
   checkWin()
 })
 
 card5.addEventListener('click', () => {
-  clickCount = clickCount + 1
-  let timeLeft = 7
-  const timer = setInterval(function () {
-    if (timeLeft <= 0) {
-      clearInterval(timer)
-      countDown.innerHTML = 'Pick a card!'
-      card5.style.backgroundImage = ''
-    } else {
-      countDown.value = 7 - timeLeft
-      card5.style.backgroundImage = cards[4]
-    }
-    timeLeft -= 1
-  }, 1000)
+  cardsClicked.push(card5style)
+  card5.style.backgroundImage = cards[4]
+  clickCount += 1
   checkMatch()
+  if (cardsClicked.length == 2 && cardsMatched === true) {
+  } else if (cardsMatched === false) {
+    card5.style.backgroundImage =
+      'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
+  }
   checkWin()
 })
 
 card6.addEventListener('click', () => {
-  clickCount = clickCount + 1
-  let timeLeft = 7
-  const timer = setInterval(function () {
-    if (timeLeft <= 0) {
-      clearInterval(timer)
-      countDown.innerHTML = 'Pick a card!'
-      card6.style.backgroundImage = ''
-    } else {
-      countDown.value = 7 - timeLeft
-      card6.style.backgroundImage = cards[5]
-    }
-    timeLeft -= 1
-  }, 1000)
+  cardsClicked.push(card6style)
+  card6.style.backgroundImage = cards[5]
+  clickCount += 1
   checkMatch()
+  if (cardsClicked.length == 2 && cardsMatched === true) {
+  } else if (cardsMatched === false) {
+    card6.style.backgroundImage =
+      'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
+  }
   checkWin()
 })
 
 card7.addEventListener('click', () => {
-  clickCount = clickCount + 1
-  let timeLeft = 7
-  const timer = setInterval(function () {
-    if (timeLeft <= 0) {
-      clearInterval(timer)
-      countDown.innerHTML = 'Pick a card!'
-      card7.style.backgroundImage = ''
-    } else {
-      countDown.value = 7 - timeLeft
-      card7.style.backgroundImage = cards[6]
-    }
-    timeLeft -= 1
-  }, 1000)
+  cardsClicked.push(card7style)
+  card7.style.backgroundImage = cards[6]
+  clickCount += 1
   checkMatch()
+  if (cardsClicked.length == 2 && cardsMatched === true) {
+  } else if (cardsMatched === false) {
+    card7.style.backgroundImage =
+      'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
+  }
   checkWin()
 })
 
 card8.addEventListener('click', () => {
-  clickCount = clickCount + 1
-  let timeLeft = 7
-  const timer = setInterval(function () {
-    if (timeLeft <= 0) {
-      clearInterval(timer)
-      countDown.innerHTML = 'Pick a card!'
-      card8.style.backgroundImage = ''
-    } else {
-      countDown.value = 7 - timeLeft
-      card8.style.backgroundImage = cards[7]
-    }
-    timeLeft -= 1
-  }, 1000)
+  cardsClicked.push(card8style)
+  card8.style.backgroundImage = cards[7]
+  clickCount += 1
   checkMatch()
+  if (cardsClicked.length == 2 && cardsMatched === true) {
+  } else if (cardsMatched === false) {
+    card8.style.backgroundImage =
+      'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
+  }
   checkWin()
 })
