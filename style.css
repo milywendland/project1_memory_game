@@ -74,7 +74,8 @@ a:hover {
   border-style: none;
   border-radius: 12px;
   margin-bottom: 10px;
-  background-size: 170px;
+  background-size: 150px 250px;
+  background-image: url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png);
 }
 
 .insta a {

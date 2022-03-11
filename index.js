@@ -1,12 +1,12 @@
 let cards = [
-  'url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fea%2F59%2F28%2Fea59289ff04a29c2d2c3f867c16fe7a4.jpg&f=1&nofb=1)',
-  'url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fih1.redbubble.net%2Fimage.395960593.4609%2Fbg%2Cf8f8f8-flat%2C750x%2C075%2Cf-pad%2C750x1000%2Cf8f8f8.jpg&f=1&nofb=1)',
-  'url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fea%2F59%2F28%2Fea59289ff04a29c2d2c3f867c16fe7a4.jpg&f=1&nofb=1)',
-  'url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fih1.redbubble.net%2Fimage.395960593.4609%2Fbg%2Cf8f8f8-flat%2C750x%2C075%2Cf-pad%2C750x1000%2Cf8f8f8.jpg&f=1&nofb=1)',
-  'url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F15%2F55%2F02%2F155502a5dfd89c8d1de22c8bcd25a2d1.jpg&f=1&nofb=1)',
-  'url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F15%2F55%2F02%2F155502a5dfd89c8d1de22c8bcd25a2d1.jpg&f=1&nofb=1)',
-  'url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fz%2Fbear-hugging-salmon-fish-vector-cartoon-isolated-white-background-cute-pastel-bear-vector-cartoon-illustration-bear-134122685.jpg&f=1&nofb=1)',
-  'url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fz%2Fbear-hugging-salmon-fish-vector-cartoon-isolated-white-background-cute-pastel-bear-vector-cartoon-illustration-bear-134122685.jpg&f=1&nofb=1)'
+  'url(https://64.media.tumblr.com/3a07caa82aa7d57105ee006a55ecaa33/55b9c5b0db771b06-8b/s500x750/4a3ecbf8119af2ab48f2ea3468a2254b0f5841e7.png)',
+  'url(https://64.media.tumblr.com/3a07caa82aa7d57105ee006a55ecaa33/55b9c5b0db771b06-8b/s500x750/4a3ecbf8119af2ab48f2ea3468a2254b0f5841e7.png)',
+  'url(https://64.media.tumblr.com/c463853f78b0bc7da1c8c205fb9da318/55b9c5b0db771b06-20/s540x810/eb713fc2467813e7051b72deb0878e3e294c7df2.png)',
+  'url(https://64.media.tumblr.com/c463853f78b0bc7da1c8c205fb9da318/55b9c5b0db771b06-20/s540x810/eb713fc2467813e7051b72deb0878e3e294c7df2.png)',
+  'url(https://64.media.tumblr.com/4e670e7e9295be9dd59edc2e8ced7291/55b9c5b0db771b06-57/s400x600/50c491dc69a1a6ae88f42d32985e41cf24a5d3af.png)',
+  'url(https://64.media.tumblr.com/4e670e7e9295be9dd59edc2e8ced7291/55b9c5b0db771b06-57/s400x600/50c491dc69a1a6ae88f42d32985e41cf24a5d3af.png)',
+  'url(https://64.media.tumblr.com/3497c8a6edb8a25df413a6f9c6371444/55b9c5b0db771b06-4e/s400x600/c6e34f9e7e300058a848f57a2968747680cf3253.png)',
+  'url(https://64.media.tumblr.com/3497c8a6edb8a25df413a6f9c6371444/55b9c5b0db771b06-4e/s400x600/c6e34f9e7e300058a848f57a2968747680cf3253.png)'
 ]
 
 let countDown = document.getElementById('countdown')
@@ -114,14 +114,22 @@ startButton.addEventListener('click', () => {
     if (timeLeft <= 0) {
       clearInterval(timer)
       countDown.innerHTML = 'Pick a card!'
-      card1.style.backgroundImage = ''
-      card2.style.backgroundImage = ''
-      card3.style.backgroundImage = ''
-      card4.style.backgroundImage = ''
-      card5.style.backgroundImage = ''
-      card6.style.backgroundImage = ''
-      card7.style.backgroundImage = ''
-      card8.style.backgroundImage = ''
+      card1.style.backgroundImage =
+        'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
+      card2.style.backgroundImage =
+        'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
+      card3.style.backgroundImage =
+        'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
+      card4.style.backgroundImage =
+        'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
+      card5.style.backgroundImage =
+        'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
+      card6.style.backgroundImage =
+        'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
+      card7.style.backgroundImage =
+        'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
+      card8.style.backgroundImage =
+        'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
     } else {
       countDown.value = 9 - timeLeft
       countDown.innerHTML = 'Countdown: ' + timeLeft
