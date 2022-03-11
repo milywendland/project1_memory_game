@@ -102,12 +102,6 @@ card1.addEventListener('click', () => {
   card1.style.backgroundImage = cards[0]
   clickCount += 1
   checkMatch()
-  if (cardsClicked.length === 2 && cardsMatched === 'cloud') {
-    card1.style.backgroundColor = '#194D33'
-  } else if (cardsMatched === 'poop') {
-    card1.style.backgroundImage =
-      'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
-  }
   checkWin()
 })
 
@@ -116,11 +110,6 @@ card2.addEventListener('click', () => {
   card2.style.backgroundImage = cards[1]
   clickCount += 1
   checkMatch()
-  if (cardsClicked.length == 2 && cardsMatched === true) {
-  } else if (cardsMatched === false) {
-    card2.style.backgroundImage =
-      'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
-  }
   checkWin()
 })
 
@@ -129,11 +118,6 @@ card3.addEventListener('click', () => {
   card3.style.backgroundImage = cards[2]
   clickCount += 1
   checkMatch()
-  if (cardsClicked.length == 2 && cardsMatched === true) {
-  } else if (cardsMatched === false) {
-    card3.style.backgroundImage =
-      'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
-  }
   checkWin()
 })
 
@@ -142,11 +126,6 @@ card4.addEventListener('click', () => {
   card4.style.backgroundImage = cards[3]
   clickCount += 1
   checkMatch()
-  if (cardsClicked.length == 2 && cardsMatched === true) {
-  } else if (cardsMatched === false) {
-    card4.style.backgroundImage =
-      'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
-  }
   checkWin()
 })
 
@@ -155,11 +134,6 @@ card5.addEventListener('click', () => {
   card5.style.backgroundImage = cards[4]
   clickCount += 1
   checkMatch()
-  if (cardsClicked.length == 2 && cardsMatched === true) {
-  } else if (cardsMatched === false) {
-    card5.style.backgroundImage =
-      'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
-  }
   checkWin()
 })
 
@@ -168,11 +142,6 @@ card6.addEventListener('click', () => {
   card6.style.backgroundImage = cards[5]
   clickCount += 1
   checkMatch()
-  if (cardsClicked.length == 2 && cardsMatched === true) {
-  } else if (cardsMatched === false) {
-    card6.style.backgroundImage =
-      'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
-  }
   checkWin()
 })
 
@@ -181,11 +150,6 @@ card7.addEventListener('click', () => {
   card7.style.backgroundImage = cards[6]
   clickCount += 1
   checkMatch()
-  if (cardsClicked.length == 2 && cardsMatched === true) {
-  } else if (cardsMatched === false) {
-    card7.style.backgroundImage =
-      'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
-  }
   checkWin()
 })
 
@@ -194,10 +158,5 @@ card8.addEventListener('click', () => {
   card8.style.backgroundImage = cards[7]
   clickCount += 1
   checkMatch()
-  if (cardsClicked.length == 2 && cardsMatched === true) {
-  } else if (cardsMatched === false) {
-    card8.style.backgroundImage =
-      'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
-  }
   checkWin()
 })
