@@ -10,7 +10,7 @@
 
 ### **_Description_**
 
-#### I want to make one of those memory card games! I think I would like to have 12 "cards" in total, with 6 sets of two matching cards. I would like to have a timer that counted down between each card matchup. There would also need to be a way to have the cards switch places after every game. I think realistically, this will be something that I can acheive and make it look really cute. I want to have something that I am really proud of at the end of this project.
+#### Busy Bear is a memory card game with a cute pastel theme. Its filled with things that bears like... Or maybe its just things that I like. Once a player matches all the cards, they win!
 
 ---
 
