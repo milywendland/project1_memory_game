@@ -22,31 +22,40 @@ let card7 = document.getElementById('btn7')
 let card8 = document.getElementById('btn8')
 let matchesStyle = document.getElementById('matches')
 
-let cardsMatched = 'cloud'
+let cardsMatched = 0
 let cardsClicked = []
+let cardsClickedId = []
 let matches = []
+let cardsClickedCopy = []
 clickCount = 0
 
-let card1style = cards[0]
-let card2style = cards[1]
-let card3style = cards[2]
-let card4style = cards[3]
-let card5style = cards[4]
-let card6style = cards[5]
-let card7style = cards[6]
-let card8style = cards[7]
+function keepCards() {}
+
+function emptyCardsClicked() {
+  cardsClicked.length = 0
+  cardsClickedId.length = 0
+}
+
+function cardFlip() {
+  cardsClickedId[0].style.backgroundImage =
+    'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
+  cardsClickedId[1].style.backgroundImage =
+    'url(https://64.media.tumblr.com/1f9b5180c50d50ca0a223e35c82f040d/55b9c5b0db771b06-48/s1280x1920/49ca034a35f9b5499e2f7622493be23180eed2cf.png)'
+}
 
 checkMatch = () => {
   if (cardsClicked.length === 2 && cardsClicked[0] === cardsClicked[1]) {
     matches.push(cardsClicked)
-    console.log(matches)
+    emptyCardsClicked()
+    console.log(cardsClicked)
   } else if (cardsClicked.length === 2 && cardsClicked[0] !== cardsClicked[1]) {
-    cardsMatched = 'poop'
+    setTimeout(cardFlip, 500)
+    setTimeout(emptyCardsClicked, 1000)
   }
 }
 
 checkWin = () => {
-  if ((matches.length = cards.length / 2) && clickCount >= 8) {
+  if (matches.length === cards.length / 2 && clickCount >= 8) {
     winner.innerHTML = 'You Win!'
   }
 }
@@ -55,6 +64,8 @@ startButton.addEventListener('click', () => {
   clickCount = 0
   matches = []
   cardsClicked = []
+  winner.innerHTML = ''
+  console.log(cardsClicked)
   function shuffle(cards) {
     cards.sort(() => Math.random() - 0.5)
   }
@@ -98,7 +109,9 @@ startButton.addEventListener('click', () => {
 })
 
 card1.addEventListener('click', () => {
-  cardsClicked.push(card1style)
+  cardsClicked.push(cards[0])
+  cardsClickedId.push(card1)
+  console.log(cardsClicked)
   card1.style.backgroundImage = cards[0]
   clickCount += 1
   checkMatch()
@@ -106,7 +119,8 @@ card1.addEventListener('click', () => {
 })
 
 card2.addEventListener('click', () => {
-  cardsClicked.push(card2style)
+  cardsClicked.push(cards[1])
+  cardsClickedId.push(card2)
   card2.style.backgroundImage = cards[1]
   clickCount += 1
   checkMatch()
@@ -114,7 +128,8 @@ card2.addEventListener('click', () => {
 })
 
 card3.addEventListener('click', () => {
-  cardsClicked.push(card3style)
+  cardsClicked.push(cards[2])
+  cardsClickedId.push(card3)
   card3.style.backgroundImage = cards[2]
   clickCount += 1
   checkMatch()
@@ -122,7 +137,8 @@ card3.addEventListener('click', () => {
 })
 
 card4.addEventListener('click', () => {
-  cardsClicked.push(card4style)
+  cardsClicked.push(cards[3])
+  cardsClickedId.push(card4)
   card4.style.backgroundImage = cards[3]
   clickCount += 1
   checkMatch()
@@ -130,7 +146,8 @@ card4.addEventListener('click', () => {
 })
 
 card5.addEventListener('click', () => {
-  cardsClicked.push(card5style)
+  cardsClicked.push(cards[4])
+  cardsClickedId.push(card5)
   card5.style.backgroundImage = cards[4]
   clickCount += 1
   checkMatch()
@@ -138,7 +155,8 @@ card5.addEventListener('click', () => {
 })
 
 card6.addEventListener('click', () => {
-  cardsClicked.push(card6style)
+  cardsClicked.push(cards[5])
+  cardsClickedId.push(card6)
   card6.style.backgroundImage = cards[5]
   clickCount += 1
   checkMatch()
@@ -146,7 +164,8 @@ card6.addEventListener('click', () => {
 })
 
 card7.addEventListener('click', () => {
-  cardsClicked.push(card7style)
+  cardsClicked.push(cards[6])
+  cardsClickedId.push(card7)
   card7.style.backgroundImage = cards[6]
   clickCount += 1
   checkMatch()
@@ -154,7 +173,8 @@ card7.addEventListener('click', () => {
 })
 
 card8.addEventListener('click', () => {
-  cardsClicked.push(card8style)
+  cardsClicked.push(cards[7])
+  cardsClickedId.push(card8)
   card8.style.backgroundImage = cards[7]
   clickCount += 1
   checkMatch()

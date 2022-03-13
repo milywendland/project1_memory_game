@@ -47,3 +47,5 @@
 #### Card shuffle/array random sorter help [W3Docs](https://www.w3docs.com/snippets/javascript/how-to-randomize-shuffle-a-javascript-array.html)
 
 #### CSS Grid [CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
+
+#### Timeout [FreeCodeCamp](https://www.freecodecamp.org/news/javascript-settimeout-how-to-set-a-timer-in-javascript-or-sleep-for-n-seconds/)
