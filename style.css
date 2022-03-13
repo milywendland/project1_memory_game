@@ -118,7 +118,7 @@ a:hover {
 
   .btn {
     height: 125px;
-    background-size: 100%;
+    background-size: cover;
     width: 75px;
   }
 
